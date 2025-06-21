@@ -123,40 +123,76 @@ const Skills = () => {
                 issuer: "INFOSYS",
                 description: "HTML, CSS, JS, responsive practices",
                 color: "from-blue-600 to-blue-700",
-                icon: "🌐"
+                icon: "🌐",
+                file: "infosys final.pdf"
               },
               {
                 title: "Google AI/ML",
                 issuer: "Google",
                 description: "Supervised learning, TensorFlow basics",
                 color: "from-green-600 to-green-700",
-                icon: "🤖"
+                icon: "🤖",
+                file: "ai_ml.pdf"
               },
               {
                 title: "Postman API",
                 issuer: "Postman",
                 description: "API requests, authentication, testing",
                 color: "from-orange-600 to-orange-700",
-                icon: "🔧"
+                icon: "🔧",
+                file: "postman.pdf"
+              },
+              {
+                title: "Internship Certificate",
+                issuer: "TECHNO OCTANET Company",
+                description: "Real-world full stack internship project",
+                color: "from-purple-600 to-purple-700",
+                icon: "💼",
+                file: "internship.pdf"
+              },
+              {
+                title: "Offer Letter",
+                issuer: "Company TECHNO OCTANET",
+                description: "Software Development Internship Offer",
+                color: "from-pink-600 to-pink-700",
+                icon: "📄",
+                file: "offerletter.pdf"
+              },
+              {
+                title: "python Certificate",
+                issuer: "Cisco",
+                description: "programming in python",
+                color: "from-pink-600 to-pink-700",
+                icon: "🎓",
+                file: "Pythonp.pdf"
               }
             ].map((cert, certIndex) => (
-              <div 
+              <a
                 key={cert.title}
-                className={`bg-gradient-to-br ${cert.color} p-6 rounded-2xl border border-white/20 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-default shadow-xl animate-scale-in relative overflow-hidden group/cert`}
+                href={`/certificates/${cert.file}`}
+                download
+                className={`bg-gradient-to-br ${cert.color} p-6 rounded-2xl border border-white/20 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-xl animate-scale-in relative overflow-hidden group/cert`}
                 style={{ animationDelay: `${1 + certIndex * 0.2}s` }}
               >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 text-center">
-                  <div className="text-3xl mb-3 animate-bounce" style={{ animationDelay: `${1.5 + certIndex * 0.2}s` }}>
+                  <div className="text-3xl mb-3 group-hover/cert:animate-glow transition-transform duration-300 transform group-hover/cert:scale-110">
                     {cert.icon}
                   </div>
+
                   <h4 className="text-white font-bold text-lg mb-2">{cert.title}</h4>
                   <p className="text-white/90 text-sm font-medium mb-2">{cert.issuer}</p>
-                  <p className="text-white/80 text-sm">{cert.description}</p>
+                  <p className="text-white/80 text-sm">Click to download</p>
                 </div>
-              </div>
+              </a>
+              
             ))}
+
           </div>
+            <p className="text-center text-white/80 mt-8 text-lg font-medium animate-fade-in">
+              Additionally, I have successfully completed certifications from <span className="text-cyan-300 font-semibold">Cisco</span> and participated in <span className="text-indigo-300 font-semibold">Eduskills Cohort Internship Programs</span>, further enhancing my practical experience and industry readiness.
+            </p>
+
         </div>
       </div>
     </section>

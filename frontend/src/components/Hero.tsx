@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Github, Linkedin, Mail, Phone, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -48,7 +47,7 @@ const Hero = () => {
               YARRAMSETTI
             </span>
           </h1>
-          
+
           <div className="relative mb-8">
             <p className="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <span className="inline-block animate-pulse">💻</span> Computer Science Undergraduate | 
@@ -56,7 +55,8 @@ const Hero = () => {
               <span className="inline-block animate-pulse" style={{ animationDelay: '1s' }}> 🧩</span> Problem Solver
             </p>
           </div>
-          
+
+          {/* Skills Tags */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {['Python', 'React', 'JavaScript', 'Node.js'].map((skill, index) => (
               <span
@@ -69,6 +69,7 @@ const Hero = () => {
             ))}
           </div>
 
+          {/* Social Icons */}
           <div className="flex justify-center space-x-6 mb-8 animate-fade-in" style={{ animationDelay: '1.3s' }}>
             {[
               { href: "https://github.com/Venkatyarramsetti", icon: Github, color: "hover:text-gray-300" },
@@ -89,6 +90,7 @@ const Hero = () => {
             ))}
           </div>
 
+          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '1.6s' }}>
             <a 
               href="#contact" 
@@ -97,6 +99,7 @@ const Hero = () => {
               <span className="relative z-10">Get In Touch</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
+
             <a 
               href="#projects" 
               className="group border-2 border-white/80 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl relative overflow-hidden"
@@ -104,12 +107,18 @@ const Hero = () => {
               <span className="relative z-10">View My Work</span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
+
+            <a
+              href="/certificates/resume.pdf"
+              download
+              className="group bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl relative overflow-hidden"
+            >
+              <span className="relative z-10">Download Resume</span>
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
+
           </div>
 
-          {/* Scroll Down Indicator */}
-          {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ChevronDown size={32} className="text-white/70" />
-          </div> */}
         </div>
       </div>
     </section>
