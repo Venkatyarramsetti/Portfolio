@@ -39,7 +39,7 @@ const About = () => {
               <div className="bg-blue-800/30 backdrop-blur-sm p-4 rounded-lg border border-blue-400">
                 <h4 className="text-blue-200 font-semibold mb-2">Education</h4>
                 <p className="text-blue-100 text-sm">B.Tech Computer Science</p>
-                <p className="text-blue-200 text-sm">VJIT, Durvada</p>
+                <p className="text-blue-200 text-sm">VIIT, Duvvada</p>
                 <p className="text-blue-300 text-sm">GPA: 8.5/10</p>
               </div>
               
@@ -66,18 +66,37 @@ const About = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-blue-300 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <p className="text-blue-100 font-medium">2⭐ Rated Coder on CodeChef</p>
-                  <p className="text-blue-200 text-sm">Peak rating of 2000+ in competitive programming</p>
+                  <p className="text-blue-100 font-medium">
+                    <a
+                      href="https://www.codechef.com/users/satyasaivenkat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-blue-100"
+                    >
+                      1⭐ Rated Coder on CodeChef
+                    </a>
+                  </p>
+                  <p className="text-blue-200 text-sm">Peak rating of 1400+ in competitive programming</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-blue-300 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <p className="text-blue-100 font-medium">Top 6-8% in LeetCode Contest</p>
-                  <p className="text-blue-200 text-sm">Ranked 1814 among global competitors</p>
+                  <p className="text-blue-100 font-medium">
+                    <a
+                      href="https://leetcode.com/u/Y_s_s_venkat/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-blue-100"
+                    >
+                      Rating of over 1900 in LeetCode Contest
+                    </a>
+                  </p>
+                  <p className="text-blue-200 text-sm">Ranked 26000 among global competitors</p>
                 </div>
               </div>
+
               
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-blue-300 rounded-full mt-2 flex-shrink-0"></div>

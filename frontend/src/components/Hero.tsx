@@ -52,7 +52,7 @@ const Hero = () => {
           <div className="relative mb-8">
             <p className="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <span className="inline-block animate-pulse">💻</span> Computer Science Undergraduate | 
-              <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}> 🚀</span> Frontend Developer | 
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}> 🚀</span> Full stack Developer | 
               <span className="inline-block animate-pulse" style={{ animationDelay: '1s' }}> 🧩</span> Problem Solver
             </p>
           </div>
@@ -107,9 +107,9 @@ const Hero = () => {
           </div>
 
           {/* Scroll Down Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown size={32} className="text-white/70" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

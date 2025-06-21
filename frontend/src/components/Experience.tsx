@@ -22,22 +22,22 @@ const Experience = () => {
 
   const achievements = [
     {
-      title: "SusHacks Hackathon 2024",
+      title: "SusHacks Hackathon 2025",
       achievement: "Reached Top 30 out of 120+ teams",
       description: "National-level event focused on innovative tech solutions under the theme 'Resume Analyzing'",
-      date: "2024"
+      date: "2025"
     },
     {
       title: "CodeChef Rating",
-      achievement: "2⭐ Rated Coder",
-      description: "Achieved a 2⭐ rating on CodeChef with participation in 15+ contests and a peak rating of 2000+, showcasing consistent growth and strong coding skills",
+      achievement: "Appeared in 110+ contests",
+      description: "Achieved a 2⭐ rating on CodeChef with participation in 110+ contests and a peak rating , showcasing consistent growth and strong coding skills",
       date: "Ongoing"
     },
     {
       title: "LeetCode Performance", 
-      achievement: "Contest Performance - Top 6-8%",
-      description: "Achieved a LeetCode Contest ranking of 1814, placing in the top 6-8% of global competitors, demonstrating advanced problem-solving skills in timed environments",
-      date: "2024"
+      achievement: "Acquired global ranking of 26160",
+      description: "Achieved a LeetCode Contest ranking of 1900+, placing in the top 6-8% of global competitors, demonstrating advanced problem-solving skills in timed environmentsand consistency by solving more than 400 practice problem",
+      date: "Ongoing"
     }
   ];
 

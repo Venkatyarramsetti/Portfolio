@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github } from 'lucide-react';
 
@@ -31,6 +30,20 @@ const Projects = () => {
       githubUrl: "https://github.com/Venkatyarramsetti/Hand-Gesture-Volume-Ctrl",
       liveUrl: "https://volumectrlbygestures.vercel.app/",
       color: "from-indigo-600 to-purple-600"
+    },
+    {
+      title: "My Portfolio",
+      description: "A personal portfolio website showcasing my projects, skills, experience, and contact details. Designed with modern UI, smooth animations, and responsive design principles.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "ShadCN UI"],
+      features: [
+        "Responsive and modern UI built with Tailwind CSS",
+        "Separate sections for About, Skills, Experience, and Projects",
+        "Integrated ShadCN UI components for consistent styling",
+        "Smooth navigation and interactive animations"
+      ],
+      githubUrl: "", // Fill later
+      liveUrl: "",   // Fill later
+      color: "from-green-600 to-emerald-500"
     }
   ];
 
@@ -90,19 +103,23 @@ const Projects = () => {
 
                     <div className="flex gap-4">
                       <a
-                        href={project.githubUrl}
+                        href={project.githubUrl || "#"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors transform hover:scale-105"
+                        className={`inline-flex items-center gap-2 ${
+                          project.githubUrl ? "bg-blue-600 hover:bg-blue-700" : "bg-gray-500 cursor-not-allowed"
+                        } text-white px-6 py-3 rounded-lg font-semibold transition-colors transform ${project.githubUrl ? "hover:scale-105" : ""}`}
                       >
                         <Github size={20} />
                         View Code
                       </a>
                       <a
-                        href={project.liveUrl}
+                        href={project.liveUrl || "#"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-100 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors transform hover:scale-105"
+                        className={`inline-flex items-center gap-2 border-2 ${
+                          project.liveUrl ? "border-blue-400 text-blue-100 hover:bg-blue-400 hover:text-white" : "border-gray-500 text-gray-300 cursor-not-allowed"
+                        } px-6 py-3 rounded-lg font-semibold transition-colors transform ${project.liveUrl ? "hover:scale-105" : ""}`}
                       >
                         Live Demo
                       </a>

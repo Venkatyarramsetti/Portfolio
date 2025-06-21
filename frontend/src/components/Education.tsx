@@ -5,7 +5,7 @@ const Education = () => {
   const educationData = [
     {
       degree: "B.Tech in Computer Science and Engineering",
-      institution: "Vignan's Institute of Information Technology, Durvada",
+      institution: "Vignan's Institute of Information Technology, Duvvada",
       duration: "08/2022 - Present",
       location: "Visakhapatnam, India",
       gpa: "8.5 / 10",
