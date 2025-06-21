@@ -26,7 +26,7 @@ const Contact = () => {
     setStatusMessage("Sending message...");
 
     try {
-      const res = await fetch("https://portfolio-iubu.onrender.com/api/contact", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
