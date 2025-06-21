@@ -42,7 +42,7 @@ const Projects = () => {
         "Smooth navigation and interactive animations"
       ],
       githubUrl: "https://github.com/Venkatyarramsetti/Portfolio",
-      liveUrl: "",   // Fill later
+      liveUrl: "https://satyasaivenkatportfolio.netlify.app/",   
       color: "from-green-600 to-emerald-500"
     }
   ];
