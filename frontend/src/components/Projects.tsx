@@ -41,7 +41,7 @@ const Projects = () => {
         "Integrated ShadCN UI components for consistent styling",
         "Smooth navigation and interactive animations"
       ],
-      githubUrl: "", // Fill later
+      githubUrl: "https://github.com/Venkatyarramsetti/Portfolio",
       liveUrl: "",   // Fill later
       color: "from-green-600 to-emerald-500"
     }

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 
@@ -10,6 +9,9 @@ const Contact = () => {
     message: ''
   });
 
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,9 +22,11 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+    setStatusMessage("Sending message...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://portfolio-iubu.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,17 +36,18 @@ const Contact = () => {
 
       const data = await res.json();
       if (data.success) {
-        alert("Message sent!");
+        setStatusMessage("✅ Message sent successfully.");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert("Failed to send. Try again.");
+        setStatusMessage("❌ Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error(error);
-      alert("Error sending message.");
+      console.error("Error:", error);
+      setStatusMessage("⚠️ Error occurred while sending message.");
+    } finally {
+      setSending(false);
     }
   };
-
 
   const contactInfo = [
     {
@@ -165,7 +170,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-blue-900/50 border border-blue-400 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                    placeholder="your.email@example.com"
+                    placeholder="your@gamil.com"
                   />
                 </div>
               </div>
@@ -205,14 +210,18 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                disabled={sending}
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </button>
+
+              {statusMessage && (
+                <p className="text-blue-200 text-center mt-4">{statusMessage}</p>
+              )}
             </form>
           </div>
         </div>
 
-        {/* Footer */}
         <div className="mt-20 pt-8 border-t border-blue-400/30 text-center">
           <p className="text-blue-100 mb-4">
             © 2024 Satya Sai Venkat Yarramsetti. All rights reserved.
