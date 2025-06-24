@@ -109,7 +109,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/certificates/resume.pdf"
+              href="/certificates/venkatresume.pdf"
               download
               className="group bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl relative overflow-hidden"
             >

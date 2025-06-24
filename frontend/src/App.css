@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+@keyframes roleCycle {
+  0% { opacity: 0; transform: scale(0.8); }
+  5% { opacity: 1; transform: scale(1); }
+  30% { opacity: 1; transform: scale(1); }
+  35% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+.animate-role-cycle .role-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  animation: roleCycle 9s infinite;
+}
+
+.animate-role-cycle .role-text:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animate-role-cycle .role-text:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.animate-role-cycle .role-text:nth-child(3) {
+  animation-delay: 6s;
+}
