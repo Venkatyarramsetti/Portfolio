@@ -30,12 +30,12 @@ const Experience = () => {
     {
       title: "CodeChef Rating",
       achievement: "Appeared in 110+ contests",
-      description: "Achieved a 2⭐ rating on CodeChef with participation in 110+ contests and a peak rating , showcasing consistent growth and strong coding skills",
+      description: "Achieved a rank of under 708 on CodeChef with participation in 110+ contests and a peak rating , showcasing consistent growth and strong coding skills",
       date: "Ongoing"
     },
     {
       title: "LeetCode Performance", 
-      achievement: "Acquired global ranking of 26160",
+      achievement: "Acquired knight badge",
       description: "Achieved a LeetCode Contest ranking of 1900+, placing in the top 6-8% of global competitors, demonstrating advanced problem-solving skills in timed environmentsand consistency by solving more than 400 practice problem",
       date: "Ongoing"
     }
